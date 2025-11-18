@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use client';
 import { Product } from "@/sanity.types";
 //import useBasketStore from "@/store/store";

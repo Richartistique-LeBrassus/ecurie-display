@@ -4,7 +4,7 @@ import { featuredModels, lookbookModels } from "@/data/index";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -15,7 +15,6 @@ export default function FeaturedMasterpieces() {
   const [activeIndex, setActiveIndex] = useState(0);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null); 
-  const scrollRef = useRef<HTMLDivElement | null>(null); 
 
   useEffect(() => {
     if (headingRef.current) {
