@@ -7,7 +7,7 @@ import { EmailSubscribeDisplay } from "./ui/EmailSubscribeDisplay";
 const Footer = () => {
   return (
     <footer className="px-auto mx-auto pb-10 px-4 md:px-8 pt-20 w-full 
-      bg-neutral-50 border-t rounded-t-3xl border-neutral-300"
+      bg-neutral-50 border-t border-neutral-300"
     >
         <div className="grid grid-cols-1 lg:grid-cols-4 pb-10 w-full px-auto mx-auto
           items-start"

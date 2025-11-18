@@ -12,7 +12,7 @@ import { ThemeProviders } from '@/components/ui/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'Écurie Richartistique | Official Online Store',
-  description: 'Luxury Scale Model E-commerce Store by MJ Ríchards',
+  description: 'Luxury Scale Model E-commerce Store by MJ Richards',
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },

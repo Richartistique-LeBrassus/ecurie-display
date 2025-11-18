@@ -51,7 +51,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-top min-h-screen relative">
         <CinematicHero />       
         <FeaturedMasterpieces />
-        <RetroCatalogue />
+        <RetroCatalogue />{/**/}
       </div>
     </div>
   );

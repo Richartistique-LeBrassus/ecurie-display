@@ -62,7 +62,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
         aria-modal="true"
         className="fixed inset-0 z-90 flex flex-col justify-between items-center
         pt-20 pb-5 px-9 h-full
-        md:pt-28 2xl:pt-36 
+        2xl:pt-24 
         sm:px-16 2xl:px-28 rounded-tr-sm
         md:w-1/2
         bg-neutral-100 text-stone-950"
@@ -76,9 +76,10 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
             />
           </button>
         </div>    
-        <div className="flex flex-col h-full w-full ">
-          <nav className="flex flex-col gap-3 w-full border-y border-neutral-400 text-sm uppercase tracking-wider font-bold md:py-9">
-            <ul className="flex flex-col gap-3">
+        <div className="flex flex-col h-full w-full">
+          <nav className="flex flex-col gap-3 w-full border-y py-16 mt-10
+          border-neutral-400 text-sm uppercase tracking-wider font-bold">
+            <ul className="flex flex-col gap-6">
               {["Porsche", "Ferrari", "Parts & Spares", "Merchandise"].map((item, i) => {
                 const slug = `/${encodeURIComponent(
                   item.toLowerCase().replace(/ & /g, "-").replace(/\s+/g, "-")
@@ -106,7 +107,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
             </ul>
           </nav>    
           <ClerkLoaded>
-            <div className="flex flex-col text-zinc-700 justify-between h-fit 
+            <div className="flex flex-col text-zinc-700 justify-between max-h-fit
               space-y-11 text-sm uppercase tracking-wider font-bold mt-auto">
               <SignedIn>
                 <Link
@@ -187,7 +188,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
             </div>
           </ClerkLoaded>    
           <div className="text-sm uppercase tracking-wide text-center 
-            border-t border-neutral-400 pt-5 mt-auto">
+            border-t border-neutral-400 pb-7 pt-14 mt-auto">
             <a href="https://int.balmain.com/">
               <div className="tracking-widest uppercase">
                 <p className="text-xs mb-2">Scale Models By</p>

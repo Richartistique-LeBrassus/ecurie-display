@@ -57,24 +57,12 @@ export default function FeaturedMasterpieces() {
     }
   }, []);
 
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20 }, 
-  visible: (i: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.12,    
-      duration: 0.8,    
-      ease: "easeOut" as const,
-    },
-  }),
-};
-
   const [activeTab, setActiveTab] = useState<"boutique" | "lookbook">("boutique");
 
   return (
    <section
-     className="w-full bg-neutral-50 py-44 sm:py-[184px] md:py-48 lg:py-56 px-4 md:px-16
+     className="relative z-20 
+     w-full bg-neutral-50 py-44 sm:py-[184px] md:py-48 lg:py-56 px-4 md:px-16
      2xl:py-60">
       <div
         ref={wrapperRef}
@@ -108,24 +96,15 @@ const cardVariants: Variants = {
         <AnimatePresence mode="wait">
           {activeTab === "boutique" ? (
             <motion.div
-              ref={scrollRef}
-              initial={false}        
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               {lookbookModels.map((model, index) => (
-                <motion.div
+                <div
                   key={index}
-                  custom={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
-                  variants={cardVariants}
                   className="group relative overflow-hidden 
-                  rounded-3xl transition-all duration-300 
-                  hover:cursor-pointer h-[400px]"
+                    rounded-3xl transition-all duration-300 
+                    hover:cursor-pointer h-[400px]"
                 >
                   <Image
                     src={model.imageUrl}
@@ -134,7 +113,7 @@ const cardVariants: Variants = {
                     fill
                     priority
                   />
-                </motion.div>
+                </div>
               ))}
             </motion.div>
           ) : (

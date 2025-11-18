@@ -151,47 +151,30 @@ export default function Lightbox({ images = [], productName = "", children }: Pr
 
             <div className="relative flex w-full max-w-[1400px] flex-col items-center gap-6 z-10">
               <div
-                className="relative flex w-full items-center justify-center overflow-hidden rounded-xs cursor-pointer"
+                className="relative flex w-full items-center justify-center overflow-hidden cursor-pointer rounded-xs"
                 onClick={(e) => {
                   e.stopPropagation();
                   setZoomed((z) => !z);
                 }}
               >
                 <AnimatePresence mode="wait">
-                {/*<motion.div
-                  key={index}
-                  className="relative w-full h-[80vh]"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, scale: zoomed ? 1.5 : 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                >
-                  <Image
-                    src={images[index].src}
-                    alt={images[index].alt ?? productName ?? `Image ${index + 1}`}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 1200px"
-                    priority
-                  />
-                </motion.div>*/}
-                <motion.div
-  key={index}
-  className="relative w-full h-[100vh] lg:h-[80vh]" // full height on all screens
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1, scale: zoomed ? 1.5 : 1 }}
-  exit={{ opacity: 0 }}
-  transition={{ duration: 0.5, ease: "easeInOut" }}
->
-  <Image
-    src={images[index].src}
-    alt={images[index].alt ?? productName ?? `Image ${index + 1}`}
-    fill
-    className="object-contain"
-    sizes="100vw"
-    priority
-  />
-</motion.div>
+                  <motion.div
+                    key={index}
+                    className="relative w-full h-[100vh] lg:h-[80vh]" // full height on all screens
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, scale: zoomed ? 1.5 : 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                  >
+                    <Image
+                      src={images[index].src}
+                      alt={images[index].alt ?? productName ?? `Image ${index + 1}`}
+                      fill
+                      className="object-contain"
+                      sizes="100vw"
+                      priority
+                    />
+                  </motion.div>
                 </AnimatePresence>
 
                 <button
@@ -233,16 +216,13 @@ export default function Lightbox({ images = [], productName = "", children }: Pr
                 </div>
               </div>
 
-              {/*<div ref={thumbsContainerRef} className="w-full max-w-[1100px] overflow-x-auto overflow-y-scroll py-2">
-                <div className="w-full flex sm:justify-center gap-3 px-2">
+              <div ref={thumbsContainerRef} className="hidden lg:flex w-full max-w-[1100px] overflow-x-auto overflow-y-scroll py-2">
+                <div className="w-full flex justify-center gap-3 px-2">
                   {images.map((img, i) => (
                     <motion.button
                       key={i}
                       ref={(el) => { thumbRefs.current[i] = el!; }} 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setIndex(i);
-                      }}
+                      onClick={(e) => { e.stopPropagation(); setIndex(i); }}
                       aria-label={`Open image ${i + 1}`}
                       className="relative h-20 min-w-[80px] shrink-0 overflow-hidden border focus:outline-none hover:cursor-pointer rounded-xl"
                       whileHover={{ scale: 1.05 }}
@@ -262,47 +242,10 @@ export default function Lightbox({ images = [], productName = "", children }: Pr
                           transition={{ type: "spring", stiffness: 500, damping: 40 }}
                         />
                       )}
-                      {i !== index && (
-                        <motion.div
-                          className="absolute inset-0 rounded-xs border-2 border-white/20 opacity-0"
-                          whileHover={{ opacity: 1 }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      )}
                     </motion.button>
                   ))}
                 </div>
-              </div>*/}
-              <div ref={thumbsContainerRef} className="hidden lg:flex w-full max-w-[1100px] overflow-x-auto overflow-y-scroll py-2">
-  <div className="w-full flex justify-center gap-3 px-2">
-    {images.map((img, i) => (
-      <motion.button
-        key={i}
-        ref={(el) => { thumbRefs.current[i] = el!; }} 
-        onClick={(e) => { e.stopPropagation(); setIndex(i); }}
-        aria-label={`Open image ${i + 1}`}
-        className="relative h-20 min-w-[80px] shrink-0 overflow-hidden border focus:outline-none hover:cursor-pointer rounded-xl"
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      >
-        <Image
-          src={img.src}
-          alt={img.alt ?? `thumb-${i + 1}`}
-          fill
-          sizes="80px"
-          className="object-cover rounded-xl"
-        />
-        {i === index && (
-          <motion.div
-            layoutId="thumb-border"
-            className="absolute inset-0 rounded-xl border-2 border-black/90"
-            transition={{ type: "spring", stiffness: 500, damping: 40 }}
-          />
-        )}
-      </motion.button>
-    ))}
-  </div>
-</div>
+              </div>
             </div>
           </div>,
           document.body
