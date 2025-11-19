@@ -108,7 +108,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
           </nav>    
           <ClerkLoaded>
             <div className="flex flex-col text-zinc-700 justify-between max-h-fit
-              space-y-11 text-sm uppercase tracking-wider font-bold mt-auto">
+              space-y-7 text-sm uppercase tracking-wider font-bold mt-auto">
               <SignedIn>
                 <Link
                   href="/orders"
