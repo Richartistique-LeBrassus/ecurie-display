@@ -12,7 +12,6 @@ interface Props {
 }
 
 export default function AddToBasketButton({ product, disabled, className = '' }: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   //const { getItemCount, setItemQuantity } = useBasketStore();
 
   const [isClient, setIsClient] = useState(false);
