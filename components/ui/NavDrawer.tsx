@@ -75,7 +75,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
               hover:text-neutral-600 ease-in-out hover:scale-105"
             />
           </button>
-        </div>    
+        </div>
         <div className="flex flex-col h-full w-full">
           <nav className="flex flex-col gap-3 w-full border-y py-5   mt-10
           border-neutral-400 text-sm uppercase tracking-wider font-bold">
@@ -105,10 +105,13 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
                 );
               })}
             </ul>
-          </nav>    
+          </nav>
           <ClerkLoaded>
+
+            {/* padding added here → py-3 */}
             <div className="flex flex-col text-zinc-700 justify-between max-h-fit
-              space-y-5  text-sm uppercase tracking-wider font-bold mt-auto">
+              space-y-5 py-3 text-sm uppercase tracking-wider font-bold mt-auto">
+
               <SignedIn>
                 <Link
                   href="/orders"
@@ -122,7 +125,8 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
                       group-hover:text-cyan-600"></span>
                   </span>
                 </Link>
-              </SignedIn>          
+              </SignedIn>
+
               <SignedOut>
                 <SignInButton mode="modal">
                   <a
@@ -138,7 +142,8 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
                     </span>
                   </a>
                 </SignInButton>
-              </SignedOut>            
+              </SignedOut>
+
               <SignedIn>
                 <Link
                   href="/wishlist"
@@ -152,7 +157,8 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
                       group-hover:text-blue-900"></span>
                   </span>
                 </Link>
-              </SignedIn>    
+              </SignedIn>
+
               <SignedOut>
                 <SignInButton mode="modal">
                   <a
@@ -168,7 +174,8 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
                     </span>
                   </a>
                 </SignInButton>
-              </SignedOut>            
+              </SignedOut>
+
               <SignedIn>
                 <SignOutButton>
                   <a
@@ -186,9 +193,10 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
                 </SignOutButton>
               </SignedIn>
             </div>
-          </ClerkLoaded>    
+          </ClerkLoaded>
+
           <div className="text-sm uppercase tracking-wide text-center 
-            border-t border-neutral-400 pb-7 pt-14 mt-auto">
+            border-t border-neutral-400 pb-7 pt-7 lg:pt-14 mt-auto">
             <a href="https://int.balmain.com/">
               <div className="tracking-widest uppercase">
                 <p className="text-xs mb-2">Scale Models By</p>
@@ -198,15 +206,15 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
                     <div className="flex-col h-fit">
                       <h2 className="text-xs font-bold text-black ">curie</h2>
                     </div>
-                  </div>  
+                  </div>
                   <div className="tracking-widest uppercase inline-flex items-center logo -mt-6">
                     <h2 className="text-5xl font-extrabold text-black tracking-tight">R</h2>
-                    <div className="flex-col h-fit mt-2">                      
+                    <div className="flex-col h-fit mt-2">
                       <h2 className="text-xs font-bold text-black tracking-tight">
                         ichartistique
                       </h2>
-                    </div> 
-                  </div>                     
+                    </div>
+                  </div>
                 </div>
               </div>
             </a>
