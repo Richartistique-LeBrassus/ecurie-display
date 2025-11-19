@@ -62,7 +62,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
         aria-modal="true"
         className="fixed inset-0 z-90 flex flex-col justify-between items-center
         pt-20 pb-5 px-9 h-full
-        2xl:pt-24 
+        2xl:pt-20 
         sm:px-16 2xl:px-28 rounded-tr-sm
         md:w-1/2
         bg-neutral-100 text-stone-950"
@@ -77,7 +77,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
           </button>
         </div>    
         <div className="flex flex-col h-full w-full">
-          <nav className="flex flex-col gap-3 w-full border-y py-10 md:py-12  mt-10
+          <nav className="flex flex-col gap-3 w-full border-y py-5   mt-10
           border-neutral-400 text-sm uppercase tracking-wider font-bold">
             <ul className="flex flex-col gap-6">
               {["Porsche", "Ferrari", "Parts & Spares", "Merchandise"].map((item, i) => {
@@ -108,7 +108,7 @@ const NavDrawer = ({ isOpen, onClose }: NavDrawerProps) => {
           </nav>    
           <ClerkLoaded>
             <div className="flex flex-col text-zinc-700 justify-between max-h-fit
-              space-y-7 text-sm uppercase tracking-wider font-bold mt-auto">
+              space-y-5  text-sm uppercase tracking-wider font-bold mt-auto">
               <SignedIn>
                 <Link
                   href="/orders"
