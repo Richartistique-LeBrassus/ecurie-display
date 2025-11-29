@@ -29,7 +29,7 @@ function ProductThumb({ product }: { product : ProductType }) {
         {product.images?.[0] && (
           <Image
             className="object-cover transition-transform duration-300 group-hover:scale-101"
-            src={imageUrl(product.images[0]).url()}
+            src='/images/kunstsammlung.jpg'
             alt={product.name || "Product image"}
             fill
             priority

@@ -108,7 +108,7 @@ export default function FeaturedMasterpieces() {
                   <Image
                     src={model.imageUrl}
                     alt={model.title}
-                    className="w-full h-[400px] object-cover"
+                    className="w-full h-[400px] object-cover brightness-[85%]"
                     fill
                     priority
                   />
@@ -194,7 +194,8 @@ export default function FeaturedMasterpieces() {
                               src={model.imageUrl}
                               alt={model.title}
                               fill
-                              className="object-cover rounded-3xl transition-transform duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]"
+                              className="object-cover rounded-3xl transition-transform brightness-[85%]
+                              duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]"
                               priority={isActive}
                             />
                             <div className="absolute bottom-0 p-6 text-white z-10">

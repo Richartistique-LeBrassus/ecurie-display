@@ -120,19 +120,6 @@ const SearchDrawer: React.FC<SearchDrawerProps> = ({ isOpen, onClose, children }
               focus:outline-none transition"
           />
         </Form>
-
-        {results.length > 0 && (
-          <ul className="mt-6 space-y-3">
-            {results.map((item) => (
-              <li
-                key={item.objectID}
-                className="text-stone-50 border-b border-zinc-900 pb-2"
-              >
-                {item.name}
-              </li>
-            ))}
-          </ul>
-        )}
       </motion.aside>
     </>
   );

@@ -69,7 +69,7 @@ export default async function ProductPage({
     alt: (img.alt as string) ?? 'Product Image',
   }));
 
-  const mainImage = images[0]?.src || '/images/logo.png';
+  const mainImage = '/images/kunstsammlung.jpg';
   const secondImage = images[1]?.src || '';
   const thirdImage = images[2]?.src || '';
   const fourthImage = images[3]?.src || '';
@@ -150,7 +150,7 @@ export default async function ProductPage({
                 {product.images?.[1] && (
                   <Image
                     className="object-cover w-full h-full rounded-full"
-                    src={secondImage}
+                    src='/images/kunstsammlung.jpg'
                     alt="manufacturer's badge"
                     layout="fill"
                     loading="lazy"
@@ -166,7 +166,7 @@ export default async function ProductPage({
                 {product.images?.[2] && (
                   <Image
                     className="object-cover w-full h-full rounded-4xl"
-                    src={thirdImage}
+                    src='/images/kunstsammlung.jpg'
                     alt="upper product-view"
                     layout="fill"
                     loading="lazy"
@@ -176,7 +176,7 @@ export default async function ProductPage({
               <div className="relative w-full h-[85vw] sm:h-auto sm:w-[45vh] md:w-[70vh]">
                 <Image
                   className="object-cover w-full h-full rounded-4xl"
-                  src="/images/have.jpg"
+                  src='/images/kunstsammlung.jpg'
                   alt="decorative image"
                   width={1168}
                   height={1752}
@@ -198,7 +198,7 @@ export default async function ProductPage({
                   {imgSrc && (
                     <Image
                       className="object-cover w-full h-full rounded-4xl sm:rounded-full"
-                      src={imgSrc}
+                      src='/images/kunstsammlung.jpg'
                       alt="product"
                       layout="fill"
                       loading="lazy"
@@ -214,7 +214,7 @@ export default async function ProductPage({
             relative w-full h-[70vw] sm:h-[47vw] md:h-[43vw] lg:h-[40vw] xl:h-[34vw] mx-auto">
               {product.images?.[6] && (
                 <Image
-                  src={seventhImage}
+                  src='/images/kunstsammlung.jpg'
                   className="rounded-t-4xl xl:rounded-t-full object-center"
                   alt="Decorative banner image"
                   layout="fill"

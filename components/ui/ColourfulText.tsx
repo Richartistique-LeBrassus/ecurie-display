@@ -41,7 +41,8 @@ export function ColourfulText({ text, colors }: ColourfulTextProps) {
           duration: 0.5,
           delay: index * 0.05,
         }}
-        className={`drop-shadow-2xl font-extrabold text-lg text-stone-50 text-center uppercase tracking-widest ${
+        className={`drop-shadow-2xl font-extrabold text-lg 
+          text-stone-50 text-center uppercase tracking-widest ${
           isNumber ? '' : ''
         }`}
       >

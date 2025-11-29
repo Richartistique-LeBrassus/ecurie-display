@@ -50,7 +50,7 @@ export default async function SubcategoryPage({ params }: { params: Promise<{ sl
             {subcategory?.image && (
               <Image
                 className="object-cover w-full h-[45vh] sm:h-[50vh] rounded-b-4xl"
-                src={urlFor(subcategory.image).url()}
+                src='/images/kunstsammlung.jpg'
                 alt="Subcategory Banner"
                 fill
                 loading="lazy"

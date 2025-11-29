@@ -61,7 +61,7 @@ export default async function SearchPage({ searchParams }: PageProps) {
         <div className="relative w-full h-[60vh] sm:h-[50vh]">
           <Image
             className="object-cover w-full h-[60vh] sm:h-[50vh] grayscale brightness-[45%]"
-            src="/images/search-1.jpg"
+            src="/images/kunstsammlung.jpg"
             alt="background-image"
             fill
             loading="lazy"

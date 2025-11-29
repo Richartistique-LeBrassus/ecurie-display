@@ -118,7 +118,7 @@ const VideoSlideshow: React.FC<VideoSlideshowProps> = ({ videos, interval = 5000
                 alt={video.title}
                 width={1280}
                 height={720}
-                className="w-full h-full object-cover rounded-xs relative z-10"
+                className="w-full h-full object-cover rounded-3xl relative z-10 brightness-50"
                 priority={index === 0} 
                 onLoadingComplete={() => setLoading(false)}
               />

@@ -167,7 +167,7 @@ export default function Lightbox({ images = [], productName = "", children }: Pr
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                   >
                     <Image
-                      src={images[index].src}
+                      src='/images/kunstsammlung.jpg'
                       alt={images[index].alt ?? productName ?? `Image ${index + 1}`}
                       fill
                       className="object-contain"
@@ -229,7 +229,7 @@ export default function Lightbox({ images = [], productName = "", children }: Pr
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
                       <Image
-                        src={img.src}
+                        src='/images/kunstsammlung.jpg'
                         alt={img.alt ?? `thumb-${i + 1}`}
                         fill
                         sizes="80px"
