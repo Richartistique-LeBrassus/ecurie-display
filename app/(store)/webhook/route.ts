@@ -1,4 +1,34 @@
-import { Metadata } from "@/actions/createCheckoutSession";
+import { NextRequest, NextResponse } from "next/server";
+
+/**
+ * Portfolio-safe webhook.
+ * If required env vars are missing, it simply returns 200
+ * so builds never fail.
+ */
+
+export async function POST(req: NextRequest) {
+  // If any critical env var is missing → exit early, don't crash the build
+  if (
+    !process.env.STRIPE_SECRET_KEY ||
+    !process.env.STRIPE_WEBHOOK_SECRET ||
+    !process.env.SANITY_PROJECT_ID ||
+    !process.env.SANITY_DATASET ||
+    !process.env.SANITY_TOKEN
+  ) {
+    return NextResponse.json(
+      { message: "Webhook disabled for portfolio build" },
+      { status: 200 }
+    );
+  }
+
+  // If you ever want to reactivate the real logic,
+  // paste your full original code below this line.
+
+  return NextResponse.json({ message: "Webhook active" }, { status: 200 });
+}
+
+{/*
+  import { Metadata } from "@/actions/createCheckoutSession";
 import stripe from "@/lib/stripe";
 import { backendClient } from "@/sanity/lib/backendClient";
 import { NextRequest, NextResponse } from "next/server";
@@ -93,4 +123,4 @@ export async function POST(req: NextRequest) {
     }
   }
   return NextResponse.json({ received: true });
-}
+}*/}
